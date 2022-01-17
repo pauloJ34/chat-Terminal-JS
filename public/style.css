@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'VT323', monospace;
+	font-size: 21px;
+	color: #fff;
+	box-sizing: border-box;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+main{
+	background-color: #000;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+input{
+	background-color: transparent;
+	margin: 0 5px;
+	caret-color: #fff;
+}
+input[type='submit']{display: none;}
+.area-chat{padding: 10px;}
+.campusSeparado{
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(39	,213,	7, .15);
+	z-index: 10;
+}
+.main{
+	padding: 5px 10px;
+	background-color: #101010;
+}
+.campusText{
+	display: flex;
+	margin: 5px 0 15px;
+}
+.button{
+	display: flex;
+	margin: 5px 0;
+}
+button{
+	width: 100%;
+	padding: 3px 0;
+	background-color: #252627;
+}
+button:hover{background-color: #1d1e1f;}
+button:active{background-color: #171818;}
+.disable{	display: none;}
+.mainGrupo-sala{display: flex;}
+.mainGrupo-sala>button{
+	margin: 10px 15px;
+	border-radius: 10px;
+}
