@@ -1,11 +1,17 @@
-const socket = io.connect('https://chatJS.pauloj34.repl.co');
+
+
+const socket = io.connect('https://chat-terminal-js.pauloj34.repl.co');
+
 
 const form = document.querySelector('.chat');
 const userName = document.querySelector("input[name='username']");
 const userMsg = document.querySelector("input[name='userMsg']")
 const btConfirm = document.querySelector("#bt-confirmar");
-const btEntrar_btcriar=[document.querySelector("#entrar"),
+const btEntrar_btcriar = [document.querySelector("#entrar"),
 	document.querySelector("#criar")];
+const fechar = document.querySelector("#Xfechar");
+const copiarCode = document.querySelector("#img");
+
 
 userName.focus();
 
@@ -22,12 +28,31 @@ userName.addEventListener("keydown", (e) =>{
 
 for(bt in btEntrar_btcriar){
 	btEntrar_btcriar[bt].addEventListener("click", e =>{
-		confirmar('2');
+		confirmar('2',e.target.id);
 	});
 }
 
 
-const confirmar = (num) =>{
+copiarCode.addEventListener("click", e =>{
+	const textoCopiado = document.querySelector("#codePass");
+	navigator.clipboard.writeText(textoCopiado.textContent);
+	console.log(textoCopiado.textContent);
+	setTimeout(()=>{	},1000*2);
+});
+
+
+
+const craeteCode = () =>{
+	let result = '';
+	const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+	for ( var i = 0; i < 12; i++ ) {
+		result += characters.charAt(Math.floor(Math.random() * characters.length));
+	}
+	console.log(result);
+	document.querySelector("#codePass").innerHTML= result;
+}
+
+const confirmar = (num,id) =>{
 	if(num=='1'){ //selecionar o nome de usuario
 		//localStorage.setItem('userName', userName.value);
 		const mainGrup = document.querySelector(".mainGrupo");
@@ -36,18 +61,21 @@ const confirmar = (num) =>{
 	}
 	else if(num == '2'){
 		document.querySelector(".mainGrupo-sala").remove();
+		
+		if(id == "entrar"){
+			document.querySelector('.mainGrupo-entrar-sala').classList.remove('disable');
+		}
+		else if(id == 'criar'){
+			craeteCode();
+		}
 	}
 }
-
-
-
-
-
 
 
 socket.on('r3c3b8rM3223g3', data => {
 	renderMessages(data.author, data.message)
 })
+
 
 userMsg.addEventListener('keydown', event => {
 	if(e.key == 'Enter'){
@@ -66,7 +94,9 @@ userMsg.addEventListener('keydown', event => {
 	}
 });
 
+
 const renderMessages = (user, msg) => {
+	
 	console.log(user+", "+msg);
 
 	let div = document.createElement('div');

@@ -47,18 +47,55 @@ input[type='submit']{display: none;}
 }
 .button{
 	display: flex;
+	width: 100%;
 	margin: 5px 0;
 }
 button{
 	width: 100%;
 	padding: 3px 0;
 	background-color: #252627;
+	cursor: pointer;
 }
 button:hover{background-color: #1d1e1f;}
 button:active{background-color: #171818;}
-.disable{	display: none;}
 .mainGrupo-sala{display: flex;}
 .mainGrupo-sala>button{
 	margin: 10px 15px;
 	border-radius: 10px;
 }
+.mainGrupo-entrar-sala>input{margin: 5px 0;}
+.mainGrupo-entrar-sala>button{margin: 5px 0;}
+.mainGrupo-criar-sala{min-width: 200px;}
+
+.mainGrupo-criar-sala>.fechar{
+	display: flex;
+	justify-content: flex-end
+}
+.mainGrupo-criar-sala>.fechar>span{
+	color:#f00;
+	font-size: 26px;
+	padding: 0 5px;
+	cursor: pointer;
+}
+.mainGrupo-criar-sala>.code{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 10px;
+}
+.mainGrupo-criar-sala>.code>span{font-size: 32px;}
+.mainGrupo-criar-sala>.code>#img{
+	width: 26px;
+	height: 26px;
+	margin-left: 10px;
+	background-image: url("https://cdn-icons-png.flaticon.com/512/82/82146.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	filter: invert() ;
+	transform: rotateY(180deg);
+	cursor: pointer;
+}
+
+
+
+.disable{	display: none;}
