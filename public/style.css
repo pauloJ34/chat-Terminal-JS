@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 
-
-
 *{
 	margin: 0;
 	padding: 0;
@@ -12,7 +10,22 @@
 	text-decoration: none;
 	border: none;
 	outline: none;
+	user-select: none;
 }
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #999; 
+}
+
 main{
 	background-color: #000;
 	min-width: 100vw;
@@ -20,14 +33,19 @@ main{
 }
 input{
 	background-color: transparent;
-	margin: 0 5px;
+	padding: 0 5px;
 	caret-color: #fff;
+}
+input[name='userMsg']{
+	width: 100%;
+	background-color: rgba(255, 255, 255, .02)
 }
 input[type='submit']{display: none;}
 .area-chat{padding: 10px;}
 .campusSeparado{
 	position: absolute;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	width: 100vw;
@@ -38,12 +56,15 @@ input[type='submit']{display: none;}
 	z-index: 10;
 }
 .main{
-	padding: 5px 10px;
+	padding: 5px;
 	background-color: #101010;
 }
 .campusText{
 	display: flex;
-	margin: 5px 0 15px;
+	justify-content: center;
+	margin: 5px 0;
+	max-height: 250px;
+	overflow-y: auto;
 }
 .button{
 	display: flex;
@@ -69,7 +90,7 @@ button:active{background-color: #171818;}
 
 .mainGrupo-criar-sala>.fechar{
 	display: flex;
-	justify-content: flex-end
+	justify-content: flex-end;
 }
 .mainGrupo-criar-sala>.fechar>span{
 	color:#f00;
@@ -95,7 +116,49 @@ button:active{background-color: #171818;}
 	transform: rotateY(180deg);
 	cursor: pointer;
 }
-
-
+.aviso{
+	position: relative;
+	margin-top: 15px;
+	background-color: #000;
+}
+.aviso span{
+	display: inline-block;
+	margin: 10px 35px;
+	text-align: center;
+	font-size: 24px;
+}
+.aviso::before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 1px;
+	width: 0;
+	background-color: #fff;
+	animation: risco 0.9s linear;
+}
+@keyframes risco{
+	to{
+		width: 0;
+	}from{
+		width: 100%;
+	}
+}
+.codSala{
+	position: absolute;
+	left: 0;
+	bottom:0;
+	cursor: pointer;
+}
+.lista-sala{
+	list-style: none;
+	margin: 0 5px;
+}
+.lista-sala > li{
+	padding: 5px 10px;
+	margin: 8px 0;
+	background-color: rgba(255, 255, 255, .1);
+	cursor: pointer;
+}
 
 .disable{	display: none;}

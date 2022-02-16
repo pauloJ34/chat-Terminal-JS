@@ -6,6 +6,7 @@
 	<title>6H4T</title>
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
+	<script src="SCRIPT/socket.js"></script>
 
 	<link rel="stylesheet" href="style.css">
 
@@ -14,7 +15,7 @@
 	<main>
 		<div class="campusSeparado">
 			<div class="main">
-				<div class="mainGrupo disable">
+				<div class="mainGrupo">
 					<div class="campusText">
 						<span>></span>
 						<input type="text" name="username" placeholder="your username" autocomplete="off">
@@ -22,25 +23,26 @@
 						<input type="text" name="cor" placeholder="#ffffff" autocomplete="off"> -->
 					</div>
 					<div class="button">
-						<button id="bt-confirmar">Confirm</button>
+						<button id="bt-confirmar" class="0">Confirm</button>
 					</div>
 				</div>
-				<div class="mainGrupo-sala">
+				<div class="mainGrupo-sala disable">
 					<button id="criar">Criar Sala</button>
 					<button id="entrar">Entrar na Sala</button>
 				</div>
 				<div class="mainGrupo-entrar-sala disable">
 					<div class="campusText">
-						<span>></span>
-						<input type="text" name="codSala" placeholder="room code" autocomplete="off">
+						<ul class="lista-sala">
+						
+						</ul>
 						<!--<span>></span>
-						<input type="text" name="cor" placeholder="#ffffff" autocomplete="off"> -->
+						<input type="text" name="codSala" placeholder="room code" autocomplete="off">-->
 					</div>
-					<div class="button">
-						<button id="bt-confirmar">Confirm</button>
-					</div>
+					<!--<div class="button">
+						<button id="bt-confirmar" class="1">Confirm</button>
+					</div>-->
 				</div>
-				<div class="mainGrupo-criar-sala">
+				<!--<div class="mainGrupo-criar-sala disable">
 					<div class="fechar">
 						<span id="Xfechar">X</span>
 					</div>
@@ -48,18 +50,18 @@
 						<span id="codePass"></span>
 						<span id='img'></span>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 		<div class="chat disable">
+			<div class="codSala"></div>
 			<span class="user"></span>
 			<input type="text" name="userMsg" placeholder="msg" autocomplete="off">
 		</div>
 		<div id="area-chat"></div>
 	</main>
-	<div class="popup">
-		<span>copiado com sucesso</span>
-		</div>
-	<script src="script.js"></script>
+	
+	<script src="SCRIPT/script.js"></script>
+	<script src="SCRIPT/events.js"></script>
 </body>
 </html>
