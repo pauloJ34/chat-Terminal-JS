@@ -4,7 +4,7 @@ const voltar_sala=()=>{
 	return salas;
 }
 const chat = () =>{
-	const socket = io.connect('https://chat-terminal-js.pauloj34.repl.co');
+	const socket = io.connect('/');
 
 	socket.on("opens-room", data =>{
 		salas=data;
