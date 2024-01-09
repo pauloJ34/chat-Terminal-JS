@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^3.1.6",
-    "express": "^4.17.2",
-    "socket.io": "^4.4.1"
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "socket.io": "^4.7.3"
   }
 }

@@ -45,6 +45,7 @@ const chat = () =>{
 		//console.log(user+", "+msg);
 
 		let div = document.createElement('div');
+		let span = document.createElement('span');
 		let strong = document.createElement('strong');
 		let textUser= document.createTextNode(`${user} : `)
 		let textMSG = document.createTextNode(msg);
@@ -53,8 +54,9 @@ const chat = () =>{
 		div.classList.add(user);
 
 		strong.appendChild(textUser);
+		span.appendChild(textMSG)
 		div.appendChild(strong);
-		div.appendChild(textMSG);
+		div.appendChild(span);
 
 		document.querySelector('#area-chat').appendChild(div);
 	}

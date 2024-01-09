@@ -18,7 +18,7 @@ app.use('/', (req, res) => {
 });
 
 io.on('connection', socket => {
-	console.log(`Usuário ${socket.id} conectado`);
+	console.log(`Usuário ${socket} conectado`);
 
 	socket.emit("opens-room", getRoomsActive());
 	

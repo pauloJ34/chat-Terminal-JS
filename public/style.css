@@ -144,11 +144,27 @@ button:active{background-color: #171818;}
 		width: 100%;
 	}
 }
-.codSala{
+.chat::after{
+	content: '';
 	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: #fff;
+	top: -5px;
+
+}
+.chat{
+	display: flex;
+	position: absolute;
+	width: 100%;
 	left: 0;
 	bottom:0;
 	cursor: pointer;
+}
+.chat>.codSala{
+	text-wrap: nowrap;
+	padding:0 20px;
+	border-left: solid #fff 2px;
 }
 .lista-sala{
 	list-style: none;
@@ -160,5 +176,7 @@ button:active{background-color: #171818;}
 	background-color: rgba(255, 255, 255, .1);
 	cursor: pointer;
 }
-
+.area-chat{
+	display: flex;
+}
 .disable{	display: none;}

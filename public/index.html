@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>6H4T</title>
-	
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.4.1/socket.io.min.js"></script>
 	<script src="SCRIPT/socket.js"></script>
 
 	<link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
 	<main>
 		<div class="campusSeparado">
@@ -33,35 +35,21 @@
 				<div class="mainGrupo-entrar-sala disable">
 					<div class="campusText">
 						<ul class="lista-sala">
-						
 						</ul>
-						<!--<span>></span>
-						<input type="text" name="codSala" placeholder="room code" autocomplete="off">-->
 					</div>
-					<!--<div class="button">
-						<button id="bt-confirmar" class="1">Confirm</button>
-					</div>-->
 				</div>
-				<!--<div class="mainGrupo-criar-sala disable">
-					<div class="fechar">
-						<span id="Xfechar">X</span>
-					</div>
-					<div class="code">
-						<span id="codePass"></span>
-						<span id='img'></span>
-					</div>
-				</div>-->
 			</div>
 		</div>
-		<div class="chat disable">
-			<div class="codSala"></div>
-			<span class="user"></span>
-			<input type="text" name="userMsg" placeholder="msg" autocomplete="off">
-		</div>
 		<div id="area-chat"></div>
+		<div class="chat disable">
+			<input type="text" name="userMsg" placeholder="msg" autocomplete="off">
+			<div class="codSala"></div>
+			<!-- <span class="user"></span> -->
+		</div>
 	</main>
-	
+
 	<script src="SCRIPT/script.js"></script>
 	<script src="SCRIPT/events.js"></script>
 </body>
+
 </html>

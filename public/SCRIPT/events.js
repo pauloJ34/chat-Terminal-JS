@@ -26,7 +26,7 @@ window.onload= function(){
 
 	document.querySelector(".codSala").addEventListener('click',(e)=>{
 		const textoCopiado = document.querySelector(".codSala");
-		navigator.clipboard.writeText(textoCopiado.textContent);
+		navigator.clipboard.writeText(textoCopiado.textContent.split(" ")[3]);
 		console.log(textoCopiado.textContent.split(" ")[3])
 	})
 	document.querySelector("main").addEventListener('click',(e)=>{
